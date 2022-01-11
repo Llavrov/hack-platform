@@ -1,0 +1,130 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/modal";
+
+.root-dark {
+  $theme-colors: (
+    "primary": #ff5151,
+    "secondary": rgba(255, 255, 255, 0.05),
+    "danger": #e53935,
+  );
+  --clrprim: #ff5151;
+  @import "../node_modules/bootstrap/scss/bootstrap";
+  --clr: #fff;
+  --clrr: 255, 255, 255;
+  color: var(--clr);
+  --main-bgclr: #000;
+  background-color: var(--main-bgclr);
+  --bgclr: #000;
+  --clr3: 59, 199, 190;
+  --bgclr2: #212330;
+  --bgclr3: #171822;
+  --shclr: rgba(245, 148, 100, 0.05);
+  input.form-control,
+  select.form-select,
+  textarea.form-control,
+  .multiselect-input,
+  .xDateRoot input {
+    color: var(--clr);
+    border: transparent;
+    border-radius: 10px;
+    outline: none;
+    opacity: 0.8;
+    background-color: var(--bgclr2);
+    box-shadow: none !important;
+    &:active,
+    &:focus {
+      background-color: #212330;
+      border-color: rgb(206, 212, 218);
+      color: var(--clr);
+    }
+    &::placeholder {
+      color: #ffffff !important;
+      opacity: 0.4 !important;
+    }
+    &:disabled {
+      background-color: #ffffff44;
+    }
+    .multiselect-clear {
+      background-color: #00000000;
+    }
+  }
+  input,
+  textarea,
+  select {
+    color: var(--clr);
+  }
+  .modal-content {
+    background-color: var(--bgclr) !important;
+  }
+  .card {
+    background-color: var(--bgclr2) !important;
+  }
+  input {
+    background-color: var(--bgclr3) !important;
+  }
+  .modal {
+    background: #ffffff33;
+    .btn-close {
+      filter: invert(100%);
+    }
+  }
+  label {
+    opacity: 1;
+  }
+}
+.root-light {
+  $theme-colors: (
+    "primary": #5878d2,
+    "secondary": rgba(255, 255, 255, 0.05),
+    "danger": #e53935,
+  );
+  --clrprim: #5878d2;
+  @import "../node_modules/bootstrap/scss/bootstrap";
+  --clr: rgb(6, 22, 36);
+  --clrr: 6, 22, 36;
+  color: var(--clr);
+  --main-bgclr: #f6f7fb;
+  background-color: var(--main-bgclr);
+  --bgclr: #fff;
+  --bgclr2: #fafafa;
+  --clr3: 69, 219, 210;
+  --bgclr3: #fff;
+  --shclr: rgba(7, 107, 156, 0.05);
+  input.form-control,
+  select.form-select,
+  textarea.form-control,
+  .multiselect-input,
+  .xDateRoot input {
+    color: var(--clr);
+    border: transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--bgclr2);
+    font-size: 14px;
+    box-shadow: none !important;
+    &:active,
+    &:focus {
+      background-color: #fafafa;
+      outline: 1px solid rgba(88, 120, 210, 0.5);
+    }
+    &::placeholder {
+      color: #061624 !important;
+      opacity: 0.4 !important;
+    }
+  }
+  label {
+    color: #8798ad;
+    opacity: 1;
+  }
+}
+
+.modal-dialog {
+  position: fixed !important;
+  margin: 0 !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
