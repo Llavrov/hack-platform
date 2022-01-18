@@ -1,11 +1,10 @@
 'use strict'
 
-const express = require('express');
-const body = require('body-parser');
-const app = express();
-
-app.use(express.static('public'));
-app.use(body.json());
+const express = require('express')
+// const path = require('path')
+const serveStatic = require('serve-static')
+const app = express()
+app.use(serveStatic(__dirname))
 
 const port = process.env.PORT || 8000;
 
